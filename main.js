@@ -15,7 +15,7 @@ const startButton = document.querySelector(".button");
 
 
     if (perimeterOfBottom <= 57 || perimeterOfBottom > 92 ){
-      throw new Error( alert('58 이상 92 이하의 값을 입력해주세요.'));
+      throw new Error( alert('58 이상 92 이하의 값을 입력해주세요.')); // 조건에 맞는 값이 아니면 에러가 뜸
     }
 
 
@@ -28,27 +28,26 @@ const startButton = document.querySelector(".button");
         ( 78 <= perimeterOfBottom && perimeterOfBottom <= 82 ) ? 80 :
         ( 83 <= perimeterOfBottom && perimeterOfBottom <= 87 ) ? 85 :
         ( 88 <= perimeterOfBottom && perimeterOfBottom <= 92 ) ? 90 :
-    
         null;
 
     console.log(sizeNumber);
 
 
-    let promptOfTop = prompt("당신의 윗가슴 둘레를 입력해주세요", "");
-
-    
-   let perimeterOfTop = Number(promptOfTop);
+    let promptOfTop = prompt("당신의 윗가슴 둘레를 입력해주세요", ""); // 윗가슴 둘레 입력    
+    let perimeterOfTop = Number(promptOfTop); // 입력 값을 숫자로 변환 
+   
 
    if (isNaN(perimeterOfTop)){
-      throw new Error( alert('작성 값은 숫자여야 합니다.')); 
+      throw new Error( alert('작성 값은 숫자여야 합니다.'));  // 숫자가 아니면 (NaN이면) 에러가 뜸
     }
 
     let gap = perimeterOfTop - perimeterOfBottom;
 
 
     if ( gap <= 7.4 || gap >= 22.5 ){
-      throw new Error( alert('해당하는 컵 사이즈가 없습니다.')); 
+      throw new Error( alert('해당하는 컵 사이즈가 없습니다.')); // 조건에 맞는 값이 아니면 에러가 뜸
     }
+    
 
     let cupNumber =  
         ( 7.5 <= gap && gap < 10 ) ? "AA컵" : 
@@ -60,11 +59,11 @@ const startButton = document.querySelector(".button");
          null;
     
     
-         console.log(cupNumber);
+    console.log(cupNumber);
 
 
     alert(`당신의 속옷 사이즈는 ${sizeNumber} ${cupNumber}입니다.`);
 
   }
 
-  startButton.addEventListener("click", resultHandler);
+  startButton.addEventListener("click", resultHandler); // 클릭 이벤트 생성
