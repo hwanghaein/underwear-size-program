@@ -50,12 +50,14 @@ const startButton = document.querySelector(".button");
     
 
     let cupNumber =  
-        ( 7.5 <= gap && gap < 10 ) ? "AA컵" : 
-        ( 10 <= gap && gap < 12.5 ) ? "A컵" : 
-        ( 12.5 <= gap && gap < 15 ) ? "B컵" : 
-        ( 15 <= gap && gap < 17.5) ? "C컵" : 
-        ( 17.5 <= gap && gap < 20 ) ? "D컵" : 
-        ( 20 <= gap && gap < 22.5 ) ? "E컵" : 
+
+        ( gap < 7.5 ) ? "AA컵" :
+        ( 7.5 <= gap && gap < 10 ) ? "A컵" : 
+        ( 10 <= gap && gap < 12.5 ) ? "B컵" : 
+        ( 12.5 <= gap && gap < 15 ) ? "C컵" : 
+        ( 15 <= gap && gap < 17.5) ? "D컵" : 
+        ( 17.5 <= gap && gap < 20 ) ? "E컵" : 
+        ( 20 <= gap && gap < 22.5 ) ? "F컵" : 
          null;
     
     
