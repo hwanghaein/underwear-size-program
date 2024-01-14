@@ -1,4 +1,4 @@
-# JS-practice1.underwear-size-program
+# [JS-practice] underwear-size-program
 
 #### 프로그램 설명: 여성의 속옷 사이즈를 알려주는 프로그램이다. 
 
